@@ -7,7 +7,6 @@ class TasksController < ApplicationController
   end
 
   def show
-    set_task
   end
 
   def new
@@ -24,17 +23,14 @@ class TasksController < ApplicationController
   end
 
   def edit
-    set_task
   end
 
   def update
-    set_task
     @task.update(task_params)
     redirect_to tasks_path
   end
 
   def destroy
-    set_task
     @task.destroy
 
     redirect_to tasks_path
